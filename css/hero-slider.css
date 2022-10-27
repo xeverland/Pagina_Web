@@ -121,7 +121,7 @@ Main Components
   }
   .cd-primary-nav li {
     display: inline-block;
-    margin-left: 1em;
+    margin-left: 0,5em;
   }
   .cd-primary-nav a {
     display: inline-block;
