@@ -472,29 +472,34 @@ section.banner {
   overflow: hidden;
   z-index: 1;
   border-radius: 5px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8)
 }
 
 .popular-places .popular-item .thumb .text-content {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 20px;
   z-index: 9;
-  color: rgb(107, 103, 103);
+  color: rgb(250, 248, 248);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8)
 }
 
 .popular-places .popular-item .thumb .text-content h4 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.5px;
   margin-top: 0px;
   margin-bottom: 5px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8)
 }
 
 .popular-places .popular-item .thumb .text-content span {
-  font-size: 13px;
+  font-size: 22px;
   font-weight: 300;
   letter-spacing: 0.5px;
   display: block;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8)
+
 }
 
 .popular-places .popular-item .thumb .plus-button {
@@ -511,10 +516,11 @@ section.banner {
   line-height: 30px;
   display: inline-block;
   text-align: center;
-  border: 1px solid #fff;
+  border: 1px solid rgb(7, 7, 7);
   border-radius: 5px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   transition: all 0.5s;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
 .popular-places .popular-item .thumb .plus-button i:hover {
