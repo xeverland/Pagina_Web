@@ -74,16 +74,15 @@
                         </div>
                     </div>
                     <div class="submit-form">
-                        <form id="form-submit" action="" method="get">
                             <div class="row">
                                 <div class="col-md-4 first-item">
                                     <fieldset>
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Nombre del producto" required="">
+                                        <input name="name" type="text" class="form-control"  placeholder="Nombre del producto">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-4 second-item">
                                     <fieldset>
-                                        <select required name='category' onchange='this.form()'>
+                                        <select  name='category' onchange='this.form()'>
                                             <option value="">Categorias</option>
                                             <option value="Disco2">Discos HDD</option>
                                             <option value="Disco1">Disco SSD</option>
@@ -583,29 +582,26 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="section-heading">
+                                            <form id="form-submit" method="POST" action="validar.php" >
                                             <span>Consulta</span>
                                             <h2>Escribe tu problema, preguta o sugerencia</h2>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                       <fieldset>
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Nombre Completo..." required="">
-                                      </fieldset>
-                                    </div>
-                                     <div class="col-md-6">
-                                      <fieldset>
-                                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Motivo..." required="">
+                                        <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre Completo..."  required="">
                                       </fieldset>
                                     </div>
                                     <div class="col-md-12">
                                       <fieldset>
-                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Describe el problema..." required=""></textarea>
+                                        <textarea name="mensaje" rows="6" class="form-control" id="mensaje" placeholder="Describe el problema..." required=""></textarea>
                                       </fieldset>
                                     </div>
                                     <div class="col-md-12">
                                       <fieldset>
-                                        <button type="submit" id="form-submit" class="btn">Enviar</button>
+                                        <button type="submit" id="boton_enviar" class="btn" >Enviar</button>
                                       </fieldset>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
@@ -714,5 +710,38 @@
     <script src="js/datepicker.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>function sendMail(name, email, subject, message) {
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.set('Authorization', 'Basic ' + base64.encode('89ee498f407fe75f05f1cb6b4871d53a'+":" +'43fea8ac0505c77879e7dd1ebcc046dd'));
+      
+        const data = JSON.stringify({
+          "Messages": [{
+            "From": {"Email": "bcaullan777@gmail.com", "Name": "bcaullan777@gmail.com"},
+            "To": [{"Email": email, "Name": name}],
+            "Subject": subject,
+            "TextPart": message
+          }]
+        });
+      
+        const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: data,
+  };
+
+  fetch("https://api.mailjet.com/v3.1/send", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error))
+
+    $("#boton_enviar").click(function(){
+  var nombre = $('#nombre').val();
+  var mensaje = $('#mensaje').val();
+
+  sendMail(nombre,"bcaullan777@gmail.com","prueba",mensaje);
+});
+}
+          </script>
 </body>
 </html>
