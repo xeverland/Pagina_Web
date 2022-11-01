@@ -367,6 +367,7 @@ section.banner {
 
 .submit-form .first-item {
   border-right: 1px solid #ddd;
+  color:rgb(0, 0, 0)
   margin-right: 10px;
 }
 
@@ -387,7 +388,7 @@ section.banner {
   border: none;
   background-color: transparent;
   font-size: 15px;
-  color: #9a9a9a;
+  color: #040404;
   outline: none;
   padding: 0px 10px;
   display: inline-block;
@@ -480,7 +481,7 @@ section.banner {
   bottom: 30px;
   left: 20px;
   z-index: 9;
-  color: rgb(250, 248, 248);
+  color: rgb(253, 255, 252);
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.8)
 }
 
@@ -493,6 +494,9 @@ section.banner {
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.8)
 }
 
+.h4{
+  color:rgba(0, 0, 0, 0.8)
+}
 .popular-places .popular-item .thumb .text-content span {
   font-size: 22px;
   font-weight: 300;

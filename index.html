@@ -29,6 +29,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
     </head>
 
@@ -74,28 +75,22 @@
                     </div>
                     <div class="submit-form">
                             <div class="row">
-                                <div class="col-md-5 second-item">
+                                <div class="col-md-6 fi-item">
                                     <fieldset>
-                                        <select  name='category' onchange='this.form()'>
-                                            <option value="">Categorias</option>
-                                            <option value="Disco2">Discos HDD</option>
-                                            <option value="Disco1">Disco SSD</option>
-                                            <option value="Memory">Memoria Ram</option>
-                                            <option value="Tarjeta">Tarjeta Grafica</option>
-                                            <option value="Panta">Pantallas</option>
-                                            <option value="Protec">Protectores</option>
-                                            <option value="Tecla">Teclados</option>
-                                            <option value="Mouser">Mouse</option>
+                                        <select  name='category' id="lista" >
+                                            <option value="soporte">Soporte Informático</option>
+                                            <option value="Disco1">Gestión De Proyecto</option>
+                                            <option value="Memory">Desarrollo Web y Aplicaciones</option>
+                                            <option value="producto">Poductos y servicios</option>
                                         </select>
                                     </fieldset>
                                 </div>
                                 <div class="col-md-3 three-item">
                                     <fieldset>
-                                        <a href="index.productos.html">
-                                        <button type="submit" id="form-submit" class="btn">Buscar</button>
-                                    </a>
+                                        <button onclick="lis()"  id="form-submit" class="btn">Buscar</button>
                                     </fieldset>
                                 </div>
+
     </section>
 
     <section class="popular-places" id="popular">
@@ -567,6 +562,7 @@
                             <li>
                                 <a href="https://wa.me/56941167158?text=Hola%20me%20gustaria%20hablar%20contigo"><i class="fa fa-whatsapp"></i></a>
                                 <a href="mailto:ing.or@outlook.com"><i class="fa fa-envelope"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100049319275120"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -614,8 +610,6 @@
         <p>Copyright &copy; 2022 ING.OR Derechos reservados
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
     <script src="js/vendor/bootstrap.min.js"></script>
     
@@ -655,5 +649,20 @@
 });
 }
           </script>
+
+<script>
+     function lis (){ 
+    alert("prueba");
+    var URLactual = window.location;
+    var categori = $( "#lista" ).val();
+    alert(categori)
+    alert(URLactual)
+    if (categori == "soporte"){ 
+        window.location.href = + URLactual + "/../soporte.html";
+    } if (categori == "producto"){
+        window.location.href = + URLactual + "/../index.productos.html";
+    }}
+    
+</script>
 </body>
 </html>
