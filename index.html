@@ -79,7 +79,7 @@
                                     <fieldset>
                                         <select  name='category' id="lista" >
                                             <option value="Servicio">Gestión De Proyecto</option>
-                                            <option value="Productos">Poductos y servicios</option>
+                                            <option value="producto">Poductos y servicios</option>
                                         </select>
                                     </fieldset>
                                 </div>
@@ -652,14 +652,15 @@
      function lis (){ 
     var URLactual = window.location;
     var categori = $( "#lista" ).val();
-   
-     if (categori == "Productos"){
+
+      if (categori == "producto"){
         window.location.href = + URLactual + "/../index.productos.html";
-    } if (categori = "Servicio");{
+       }
+
+      if (categori == "Servicio"){
         window.location.href = URLactual + "/../index.Servicios.html";
-    }
-     }
-    
+        }
+    } 
 </script>
 </body>
 </html>
