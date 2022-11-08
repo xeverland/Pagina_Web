@@ -38,7 +38,7 @@ body{
 
 .container .card{
     width: 330px;
-    height: 430px;
+    height: 460px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -53,8 +53,8 @@ body{
 }
 
 .container .card img{
-    width: 330px;
-    height: 220px;
+    width: 325px;
+    height: 260px;
 }
 
 
@@ -64,7 +64,7 @@ body{
 
 .container .card p{
     padding: 0 1rem;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
 }
 

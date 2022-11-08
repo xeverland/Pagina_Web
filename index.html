@@ -78,10 +78,8 @@
                                 <div class="col-md-6 fi-item">
                                     <fieldset>
                                         <select  name='category' id="lista" >
-                                            <option value="soporte">Soporte Informático</option>
-                                            <option value="Disco1">Gestión De Proyecto</option>
-                                            <option value="Memory">Desarrollo Web y Aplicaciones</option>
-                                            <option value="producto">Poductos y servicios</option>
+                                            <option value="Servicio">Gestión De Proyecto</option>
+                                            <option value="Productos">Poductos y servicios</option>
                                         </select>
                                     </fieldset>
                                 </div>
@@ -655,11 +653,12 @@
     var URLactual = window.location;
     var categori = $( "#lista" ).val();
    
-    if (categori == "soporte"){ 
-        window.location.href = + URLactual + "/../soporte.html";
-    } if (categori == "producto"){
+     if (categori == "Productos"){
         window.location.href = + URLactual + "/../index.productos.html";
-    }}
+    } if (categori = "Servicio");{
+        window.location.href = URLactual + "/../index.Servicios.html";
+    }
+     }
     
 </script>
 </body>
