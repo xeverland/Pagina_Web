@@ -3235,15 +3235,7 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/**
- * Support Plugin
- *
- * @version 2.3.1
- * @author Vivid Planet Software GmbH
- * @author Artus Kolanowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- */
+
 ;(function($, window, document, undefined) {
 
 	var style = $('<support>').get(0).style,
